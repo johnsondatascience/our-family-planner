@@ -1,0 +1,28 @@
+{
+  "name": "Our Family Planner",
+  "short_name": "Planner",
+  "description": "Our family's week: meals, school runs, groceries, kids' jobs and stars, and Sunday check-ins.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2F6F5",
+  "theme_color": "#0C7469",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

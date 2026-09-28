@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Family Planner</title>
+<meta name="description" content="Our family's week: meals, school runs, groceries, kids' jobs and stars, and Sunday check-ins.">
+<meta name="theme-color" content="#F2F6F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101818" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Planner">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand">
+        <h1>Our Family Planner</h1>
+        <div class="sub" id="todayline"></div>
+      </div>
+      <div class="row">
+        <div class="weeknav">
+          <button class="iconbtn" id="prevwk" aria-label="Previous week">‹</button>
+          <div class="range" id="range"></div>
+          <button class="iconbtn" id="nextwk" aria-label="Next week">›</button>
+          <button class="textbtn" id="thiswk">This week</button>
+        </div>
+        <div class="status" id="status" role="status"><span class="dot"></span><span id="statustext">Connecting…</span></div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" id="tabs"></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="banner"></div>
+  <section id="view" aria-live="polite"></section>
+</main>
+<noscript><p class="wrap">The planner needs JavaScript turned on.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>
