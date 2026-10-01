@@ -577,7 +577,15 @@ function vSnacks(){
 }
 
 /* Check-in */
-const DEAL = ["We say who’s doing what","We talk every week, even when things are good","Telling us early is always the right move","“I see it differently” is a normal thing to say","Anyone can call a pause","We go after the problem, not the person"];
+// KSLAPH: the family's six pillars, in Michael's words.
+const DEAL = [
+  ["K", "Know", "Everyone knows what their job is."],
+  ["S", "Speak", "We speak our minds, and disagreeing is totally normal."],
+  ["L", "Listen", "We check in with each other regularly."],
+  ["A", "Ask", "Ask for help early, before things get worse. It’s OK if the answer is no."],
+  ["P", "Pause", "Anyone can call a pause, any time."],
+  ["H", "Help", "We never look for someone to blame. We look for how to help."]
+];
 const DEAL_URL = CONFIG.dealUrl || "";
 function vCheckin(){
   let h = `<h2 class="sec">Weekly check-in</h2><p class="lede">One short family chat, same day, same time. Everyone gets a turn. Even the shortest turn counts.</p>`;
@@ -588,7 +596,7 @@ function vCheckin(){
     <label class="field"><span class="lbl">What was hard?</span>${dArea("c.hard","Homework on Wednesday")}</label>
     <label class="field"><span class="lbl">One thing we’ll try this week</span>${dArea("c.tryThis","Start homework before snack is done")}</label>
     <div><button class="btn" type="submit">Save this turn</button></div></form></div>
-    <div class="card"><p class="eyebrow">Our Family Deal</p><ol class="deal">${DEAL.map(d=>`<li>${esc(d)}</li>`).join("")}</ol>${DEAL_URL ? `<p style="margin:12px 0 0;font-size:.88rem"><a href="${esc(DEAL_URL)}" target="_blank" rel="noopener">Open the full Deal</a></p>` : ""}</div></div>`;
+    <div class="card"><p class="eyebrow">Our Family Deal</p><p class="kslaph" aria-label="K S L A P H">${DEAL.map(([l]) => `<span>${l}</span>`).join("")}</p><p class="muted" style="margin:-6px 0 12px;font-size:.84rem">Say it “case laugh.”</p><ul class="deal">${DEAL.map(([l, w, t]) => `<li><b class="dl">${l}</b><span><b>${esc(w)}.</b> ${esc(t)}</span></li>`).join("")}</ul>${DEAL_URL ? `<p style="margin:12px 0 0;font-size:.88rem"><a href="${esc(DEAL_URL)}" target="_blank" rel="noopener">Open the full Deal</a></p>` : ""}</div></div>`;
   h += `<div class="card" style="margin-top:16px"><p class="eyebrow">Past check-ins</p>`;
   if (loading("checkins")) h += `<p class="muted">Loading…</p>`;
   else if (!S.checkins.length) h += `<p class="muted">No check-ins yet. Your first Sunday chat will show up here.</p>`;
