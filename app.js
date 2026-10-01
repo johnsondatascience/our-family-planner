@@ -579,12 +579,12 @@ function vSnacks(){
 /* Check-in */
 // KSLAPH: the family's six pillars, in Michael's words.
 const DEAL = [
-  ["K", "Know", "We all know our jobs."],
-  ["S", "Speak", "We speak our minds, and we often disagree."],
-  ["L", "Listen", "We listen to each other regularly."],
-  ["A", "Ask", "We ask for help when we need it, or even before."],
-  ["P", "Pause", "We are all allowed to pause, and to resume."],
-  ["H", "Help", "We try to help each other, not find blame."]
+  ["K", "Know", "We all know our jobs, and what we can expect from each other."],
+  ["S", "Speak", "We disagree a lot, but we do so agreeably. We honor each other’s views."],
+  ["L", "Listen", "We check in and listen to each other regularly, at least once a week."],
+  ["A", "Ask", "We ask for help if we need it, and we talk about things that are hard."],
+  ["P", "Pause", "We each can call “pause” and resume later, no questions asked."],
+  ["H", "Help", "We try to help each other. We ask “What is happening?” then “How can we solve this?” Not “Whose fault is this?!?”"]
 ];
 // The "case laugh" briefcase, drawn after Michael's sketch. Colors follow the theme.
 const CASE_LAUGH = `<svg class="caselaugh" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A smiling briefcase: case laugh">
