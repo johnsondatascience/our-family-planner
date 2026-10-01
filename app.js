@@ -579,13 +579,21 @@ function vSnacks(){
 /* Check-in */
 // KSLAPH: the family's six pillars, in Michael's words.
 const DEAL = [
-  ["K", "Know", "Everyone knows what their job is."],
-  ["S", "Speak", "We speak our minds, and disagreeing is totally normal."],
-  ["L", "Listen", "We check in with each other regularly."],
-  ["A", "Ask", "Ask for help early, before things get worse. It’s OK if the answer is no."],
-  ["P", "Pause", "Anyone can call a pause, any time."],
-  ["H", "Help", "We never look for someone to blame. We look for how to help."]
+  ["K", "Know", "We all know our jobs."],
+  ["S", "Speak", "We speak our minds, and we often disagree."],
+  ["L", "Listen", "We listen to each other regularly."],
+  ["A", "Ask", "We ask for help when we need it, or even before."],
+  ["P", "Pause", "We are all allowed to pause, and to resume."],
+  ["H", "Help", "We try to help each other, not find blame."]
 ];
+// The "case laugh" briefcase, drawn after Michael's sketch. Colors follow the theme.
+const CASE_LAUGH = `<svg class="caselaugh" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A smiling briefcase: case laugh">
+  <path d="M45 29 C45 14 52 10 60 10 C68 10 75 14 75 29"/>
+  <path d="M19 30 L103 28 Q106 28 106 31.5 L105.5 81 Q105 84 102 84 L21 85.5 Q18 85.5 18 82.5 L17 33 Q17 30 19 30 Z" fill="var(--surface)"/>
+  <path d="M10 89 L108 87.5" stroke-width="3.5"/>
+  <path d="M36 51 Q43 41 50 51"/><path d="M70 50 Q77 40 84 50"/>
+  <path d="M50 60 Q60 59.5 71 59 Q69.5 73 60.5 73.5 Q51.5 74 50 60 Z" fill="var(--accent-soft)"/>
+</svg>`;
 const DEAL_URL = CONFIG.dealUrl || "";
 function vCheckin(){
   let h = `<h2 class="sec">Weekly check-in</h2><p class="lede">One short family chat, same day, same time. Everyone gets a turn. Even the shortest turn counts.</p>`;
@@ -596,7 +604,7 @@ function vCheckin(){
     <label class="field"><span class="lbl">What was hard?</span>${dArea("c.hard","Homework on Wednesday")}</label>
     <label class="field"><span class="lbl">One thing we’ll try this week</span>${dArea("c.tryThis","Start homework before snack is done")}</label>
     <div><button class="btn" type="submit">Save this turn</button></div></form></div>
-    <div class="card"><p class="eyebrow">Our Family Deal</p><p class="kslaph" aria-label="K S L A P H">${DEAL.map(([l]) => `<span>${l}</span>`).join("")}</p><p class="muted" style="margin:-6px 0 12px;font-size:.84rem">Say it “case laugh.”</p><ul class="deal">${DEAL.map(([l, w, t]) => `<li><b class="dl">${l}</b><span><b>${esc(w)}.</b> ${esc(t)}</span></li>`).join("")}</ul>${DEAL_URL ? `<p style="margin:12px 0 0;font-size:.88rem"><a href="${esc(DEAL_URL)}" target="_blank" rel="noopener">Open the full Deal</a></p>` : ""}</div></div>`;
+    <div class="card"><p class="eyebrow">Our Family Deal</p><div class="kshead">${CASE_LAUGH}<div><p class="kslaph" aria-label="K S L A P H">${DEAL.map(([l]) => `<span>${l}</span>`).join("")}</p><p class="muted" style="margin:0;font-size:.84rem">Say it “case laugh.”</p></div></div><ul class="deal">${DEAL.map(([l, w, t]) => `<li><b class="dl">${l}</b><span><b>${esc(w)}.</b> ${esc(t)}</span></li>`).join("")}</ul>${DEAL_URL ? `<p style="margin:12px 0 0;font-size:.88rem"><a href="${esc(DEAL_URL)}" target="_blank" rel="noopener">Open the full Deal</a></p>` : ""}</div></div>`;
   h += `<div class="card" style="margin-top:16px"><p class="eyebrow">Past check-ins</p>`;
   if (loading("checkins")) h += `<p class="muted">Loading…</p>`;
   else if (!S.checkins.length) h += `<p class="muted">No check-ins yet. Your first Sunday chat will show up here.</p>`;

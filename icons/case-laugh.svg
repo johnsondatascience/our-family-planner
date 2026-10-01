@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none" stroke="#0C7469" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+  <title>Case laugh</title>
+  <path d="M45 29 C45 14 52 10 60 10 C68 10 75 14 75 29"/>
+  <path d="M19 30 L103 28 Q106 28 106 31.5 L105.5 81 Q105 84 102 84 L21 85.5 Q18 85.5 18 82.5 L17 33 Q17 30 19 30 Z" fill="#FFFFFF"/>
+  <path d="M10 89 L108 87.5" stroke-width="3.5"/>
+  <path d="M36 51 Q43 41 50 51"/>
+  <path d="M70 50 Q77 40 84 50"/>
+  <path d="M50 60 Q60 59.5 71 59 Q69.5 73 60.5 73.5 Q51.5 74 50 60 Z" fill="#D4ECE8"/>
+</svg>
